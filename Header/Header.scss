@@ -1,0 +1,57 @@
+.appbar-container {
+  padding: 0 10px;
+  display: flex;
+  align-items: center;
+  background-color: #8C99E0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  box-shadow: 0px 0px 15px 10px rgba(0, 0, 0, 0.4);
+  -webkit-box-shadow: 0px 0px 15px 10px rgba(0, 0, 0, 0.4);
+  -moz-box-shadow: 0px 0px 15px 10px rgba(0, 0, 0, 0.4);
+  .app-logo {
+    padding: 0 10px;
+    width: 60px;
+    height: 40px;
+    .app-image {
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+    }
+  }
+  .app-name {
+    margin: 0 10px 0 0;
+  }
+  .header-action-buttons {
+    margin: 0 3px;
+    padding: 5px;
+    color:#ffffff;
+  }
+  .appbar-searchbar {
+    background-color: #ffffff;
+    border-radius: 30px;
+    border:none;
+    .search-icon-button {
+      @media screen and (max-width: 800px) {
+        padding: 5px;
+      }
+      @media screen and (max-width: 600px) {
+        display: none;
+      }
+    }
+  }
+  .appbar-spacing {
+    width: 39%;
+    @media screen and (max-width: 960px) {
+      width: 30%;
+    }
+    @media screen and (max-width: 800px) {
+      width: 15%;
+    }
+    @media screen and (max-width: 600px) {
+      width: 5%;
+    }
+  }
+}

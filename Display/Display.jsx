@@ -1,6 +1,7 @@
-import { Typography, Link } from "@material-ui/core";
+import { Typography, Link, Grid } from "@material-ui/core";
 import React, { useEffect } from "react";
-import TestImage from "../../assets/images/1.png"
+import TestImage from "../../assets/images/1.png";
+import TestImage1 from "../../assets/images/3.png";
 import HomeIcon from "@material-ui/icons/Home";
 import "./Display.scss";
 
@@ -11,12 +12,28 @@ export default function DashBoardNotes(props) {
 
   const product = props.allProducts.map((product) => {
     return (
-      <div key={product.id} className="each-product">
-        <div className="product-image">
-          <img src={TestImage} alt="No" className="img-description"/>
+      <Grid
+        item
+        lg={3}
+        md={3}
+        sm={4}
+        xs={12}
+        key={product.id}
+        className="each-product"
+      >
+        <div className="product-image">{
+          product.id % 2 === 1 ? <img src={TestImage} alt="No" className="img-description" /> : <img src={TestImage1} alt="No" className="img-description" />
+        }
         </div>
-        <div className="product-details"></div>
-      </div>
+        <div className="product-details">
+          <Typography variant="body2" color="textSecondary">{product.productname}</Typography>
+          <div className="product-price">
+          <Typography variant="body2" className="actual-price">{product.originalprice}</Typography>
+          <Typography variant="body2" className="discounted-price">{product.discountedprice}</Typography>
+
+          </div>
+          </div>
+      </Grid>
     );
   });
 
@@ -53,7 +70,9 @@ export default function DashBoardNotes(props) {
         </div>
       </div>
       <div className="body-content">
-        <div className="all-products">{product}</div>
+        <Grid container wrap justify="flex-start" spacing={2} className="all-products">
+          {product}
+        </Grid>
       </div>
     </div>
   );
