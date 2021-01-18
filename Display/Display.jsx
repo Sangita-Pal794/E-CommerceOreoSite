@@ -39,6 +39,8 @@ export default function DashBoardNotes(props) {
 
   return (
     <div className="oreo-body">
+      <div className="empty-container">       
+
       <div className="body-header">
         <div className="header-one">
           <Typography variant="body2" className="title">
@@ -62,12 +64,13 @@ export default function DashBoardNotes(props) {
             variant="caption"
             className="body-header-link"
           >
-            eCommerce /
+            eCommerce 
           </Link>
           <Link component="button" variant="caption">
-            product
+            {" / product"}
           </Link>
         </div>
+      </div>
       </div>
       <div className="body-content">
         <Grid container wrap justify="flex-start" spacing={2} className="all-products">

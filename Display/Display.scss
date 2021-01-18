@@ -1,4 +1,7 @@
 .oreo-body {
+  .empty-container{
+    background-color: #8c99e0;
+    height: 103px;
   .body-header {
     display: flex;
     justify-content: space-between;
@@ -25,14 +28,27 @@
       }
     }
   }
+}
   .body-content {
+    display: flex;
+    justify-content: center;
+    margin-top: -47px;
+    // .empty-container {
+    //   position: relative;
+    //   z-index: 20;
+    // }
     .all-products {
-      padding: 10px;
-      background-color: #F4F6F9 !important;
-      .each-product {
+      margin: 0;
+      width: calc(98% + 16px);
       // padding: 10px;
-      background-color: #ffffff;
-      margin:10px;
+      // background-color: #f4f6f9 !important;
+      // position: relative;
+      //   z-index: 30;
+
+      .each-product {
+        // padding: 10px;
+        // background-color: #ffffff;
+        // margin:10px;
         
         .product-image {
           .img-description {
@@ -43,17 +59,16 @@
           display: flex;
           align-items: center;
           flex-direction: column;
-          .product-price{
+          .product-price {
             width: 40%;
-            display:flex;
+            display: flex;
             justify-content: space-between;
-            .actual-price{
-              color:#7C889D;
-
+            // margin: 0 0 15px 0;
+            .actual-price {
+              color: #7c889d;
             }
-            .discounted-price{
-              color:red;
-
+            .discounted-price {
+              color: red;
             }
           }
         }
