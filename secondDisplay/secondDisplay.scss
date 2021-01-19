@@ -1,0 +1,79 @@
+.oreo-body-container {
+  .empty-container-one {
+    background-color: #8c99e0;
+    height: 103px;
+    .body-header-one {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #8c99e0;
+      padding: 8px 15px;
+      position: static;
+
+      .header-one-two {
+        .title-one {
+          color: #ffffff;
+        }
+      }
+      .header-two-one {
+        display: flex;
+        align-items: center;
+        background-color: #afb8ea;
+        border-radius: 30px;
+        padding: 8px;
+        .home-icon-one {
+          color: #ffffff;
+        }
+        .body-header-link-next {
+          color: #ffffff;
+        }
+      }
+    }
+  }
+  .body-content-one {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: -47px;
+    .first-part-body-content {
+      height: 80%;
+    }
+    .product-image-one {
+      .img-description-one {
+        width: 50%;
+      }
+    }
+    .edit-icon {
+      .parent-action-button {
+        display: flex;
+        justify-content: flex-end;
+        .action-button {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          background-color: #979797 !important;
+          height: 35px;
+          width: 35px;
+          margin: 2px;
+          cursor: pointer;
+          .action-button-color {
+            color: #ffffff !important;
+          }
+        }
+      }
+    }
+
+    .second-part-body-content {
+      height: 5%;
+      padding: 25px;
+      color: yellow;
+      .MuiButtonBase-root.MuiPaginationItem-root.MuiPaginationItem-page.MuiPaginationItem-textPrimary.Mui-selected {
+        background-color: orange !important;
+      }
+    }
+
+    .MuiTableCell-root {
+      width: 173px !important;
+    }
+  }
+}
