@@ -1,9 +1,10 @@
 import React from "react";
-import { Typography, Link } from "@material-ui/core";
+import { Typography, Link, IconButton } from "@material-ui/core";
 import HomeIcon from "@material-ui/icons/Home";
 import StarIcon from "@material-ui/icons/Star";
 import StarBorderOutlinedIcon from "@material-ui/icons/StarBorderOutlined";
 import CheckBoxOutlineBlankSharpIcon from "@material-ui/icons/CheckBoxOutlineBlankSharp";
+import ClearOutlinedIcon from '@material-ui/icons/ClearOutlined';
 import FavoriteIcon from "@material-ui/icons/Favorite";
 import TestImage from "../../assets/images/1.png";
 import TestImage1 from "../../assets/images/2.png";
@@ -68,15 +69,23 @@ export default function ThirdDisplay(props) {
             <div className="product-image">
               <div className="image-container">
                 <img src={TestImage} alt="No" className="img-description" />
+            <div className="multiple-product">{product}</div>
+
               </div>
+
               <div className="second-part-body-content-third">
                 <div className="first-line">
-                  <Typography fontSize="large" color="textPrimary">
+                  <Typography fontSize="large" color="textPrimary" variant="body1">
                     Simple Black Clock
                   </Typography>
                 </div>
                 <div className="second-line">
-                  <Typography fontSize="large" color="yellow">Current price:$180</Typography>
+                  <Typography fontSize="large" color="yellow" variant="body2">
+                    Current price:
+                  </Typography>
+                  <Typography fontSize="large" color="yellow" variant="body2" className="second-line-text">
+                    $180
+                  </Typography>
                 </div>
                 <div className="rating">
                   <div className="rating-left">
@@ -102,8 +111,8 @@ export default function ThirdDisplay(props) {
                       debitis itaque?
                     </Typography>
                   </div>
-                  <div className="second-para">
-                    <Typography fontSize="small">78%</Typography>
+                  <div className="second-para" variant="caption">
+                    <Typography className="simple-text">78%</Typography>
                     <Typography
                       color="textSecondary"
                       variant="caption"
@@ -111,23 +120,29 @@ export default function ThirdDisplay(props) {
                     >
                       of the buyers enjoyed this product!
                     </Typography>
-                    <Typography fontSize="small">(23 votes)</Typography>
+                    <Typography className="simple-text" variant="caption">(23 votes)</Typography>
                   </div>
                 </div>
                 <div
                   fontSize="large"
-                  color="textSecondary"
+                  color="textPrimary"
                   className="size-variant"
                 >
-                  <div className="left-size-part">SiZes: </div>
+                  <div className="left-size-part">sizes: </div>
                   <div className="right-size-part"> s m l xl</div>
                 </div>
                 <div className="color-variant">
                   <div className="left-part-color-variant">colors: </div>
                   <div className="right-part-color-variant">
-                    <CheckBoxOutlineBlankSharpIcon color="#ffe670" />
-                    <CheckBoxOutlineBlankSharpIcon />
-                    <CheckBoxOutlineBlankSharpIcon />
+                    <div className="first-color">
+                      <IconButton><ClearOutlinedIcon/></IconButton>
+                    </div>
+                    <div className="second-color">
+                      <IconButton></IconButton>
+                    </div>
+                    <div className="third-color">
+                      <IconButton></IconButton>
+                    </div>
                   </div>
                 </div>
                 <div className="add-to-cart">
@@ -140,12 +155,12 @@ export default function ThirdDisplay(props) {
                 </div>
               </div>
             </div>
-            <div className="multiple-product">{product}</div>
+            {/* <div className="multiple-product">{product}</div> */}
           </div>
         </div>
       </div>
       <div className="second-part-body-content">
-        <div color="textSecondary" variant="caption" className="option active">
+        <div color="textSecondary" variant="caption" className="option-one active">
           Description
         </div>
         <div color="textSecondary" variant="caption" className="option">
@@ -154,6 +169,9 @@ export default function ThirdDisplay(props) {
         <div color="textSecondary" variant="caption" className="option">
           About
         </div>
+      </div>
+      <div className="third-part-body-content">
+        <Typography color="textSecondary" variant="caption">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, inventore quam accusantium atque impedit accusamus laboriosam neque ex quae cum dignissimos earum, nemo iste laudantium?</Typography>
       </div>
     </div>
   );
